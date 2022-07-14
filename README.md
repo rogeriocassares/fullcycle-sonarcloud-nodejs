@@ -139,6 +139,12 @@ git push origin feature/ci-sonarcloud
 
 On Github, check the develop branch and press to `Compare & pull request`, then `Create pull request` and `Merge`.
 
-At this mometn
+Once the first job is successfully completed, then go to repository settings and create rules to the develop to `Require status checks to pass before merging` and `Require branches to be up to date before merging` choosing `run-ci` status check and include `Include administrators` Options, then save it!
 
-and create rules to the develop to `Require status checks to pass before merging` and `Require branches to be up to date before merging` choosing 
+We got it! 
+
+Now, on every PR to the develop branch, the github action called run-ci will run, call the sonarcloud process and after an async response from sonarcloud QualityGate it shall aprove to merge this branch to develop! 
+
+All done!
+
+God bless you!
